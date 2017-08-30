@@ -13,6 +13,9 @@ public class Main {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("context.xml");
 
+        Quoter shakespeareQuoter = context.getBean("shakespeareQuoter", Quoter.class);
+        shakespeareQuoter.sayQuote();
+
         context.close();
 
     }
